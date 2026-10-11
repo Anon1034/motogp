@@ -17,6 +17,10 @@ float Vmax = 0.0;
 float Vcorner = 0.0;
 float CVmax = 0.0;
 float CVcorner = 0.0;
+float pesoD = 0.30;
+float pesoV = 0.20;
+float pesoC = 0.50;
+float mediaponderata;
 
 
 
@@ -138,13 +142,20 @@ else if (Vcorner < 65)
 
 
 
+mediaponderata = ((calcoloDevS * pesoD) + (CVmax * pesoV) + (CVcorner * pesoC));
 
 
 
 
-printf("La tua velocità media in curva è (in km/h): %g\n", CVcorner);
-printf("La tua velocità di picco è (in km/h): %g\n", CVmax);
+
+
+
+printf("La tua velocità media in curva è (in km/h): %g\n", Vcorner);
+printf("La tua velocità di picco è (in km/h): %g\n", Vmax);
 printf("%g\n", calcoloDevS);
+printf("Il tuo voto è: %g", mediaponderata);
+
+
 
 
 
