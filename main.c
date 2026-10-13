@@ -1,0 +1,133 @@
+#include <stdio.h>
+#include <string.h>
+#include <strings.h>
+#include <math.h>
+
+#include "valencia.h"
+
+
+int main()
+{
+
+char circuit[20];
+float somma = 0.0;
+float media = 0.0;
+float sommaScarti = 0.0;
+float deviazioneStandard = 0.0;
+<<<<<<< HEAD
+float voto;
+float vMax, vCorner;
+float CVcorner, CVmax;
+float deviazione;
+=======
+float vMax, vCorner;
+>>>>>>> c13d8a5 (Try)
+float calcoloDevS;
+float pesoD = 0.30;
+float pesoV = 0.20;
+float pesoC = 0.50;
+float mediaponderata;
+char wet;
+int laps;
+<<<<<<< HEAD
+=======
+float devStandard;
+>>>>>>> c13d8a5 (Try)
+
+
+
+printf("Enter the circuit: ");
+scanf("%19s", circuit);
+
+
+<<<<<<< HEAD
+
+if (strcasecmp(circuit, "valencia") == 0)
+    laps = 27;
+
+
+
+    float tempi[laps];
+
+
+=======
+/*Valencia Circuit*/
+if (strcasecmp(circuit, "valencia") == 0)
+{
+    laps = 27;
+
+    float tempi[laps];
+
+>>>>>>> c13d8a5 (Try)
+    for (int i = 0; i < laps; i++)
+    {
+        printf("inserisci il tempo al giro (in secondi)%d: ", i + 1);
+        scanf("%f", &tempi[i]);
+        somma = somma + tempi[i];
+    }
+    
+    media = somma / laps;
+
+    for (int i = 0; i < laps; i++)
+    {
+        float differenza = tempi[i] - media;
+        sommaScarti = sommaScarti + (differenza * differenza);
+    }
+
+    deviazioneStandard = sqrt(sommaScarti / (laps - 1));
+    printf("%g secondi\n", deviazioneStandard);
+
+
+<<<<<<< HEAD
+
+
+    
+if (strcasecmp(circuit, "valencia") == 0)
+{
+    calcoloDevS = votoDevSValencia(deviazioneStandard);
+    printf("Inserisci la tua velocità di picco (in km/h): ");
+    scanf("%f", &vMax);
+    CVmax = votoVMaxValencia(vMax);
+    printf("Inserisci la tua velocità media in curva (in km/h): ");
+    scanf("%f", &vCorner);
+    CVcorner = votoVCornerValencia(vCorner);
+=======
+    calcoloDevS = voto1V1(devStandard);
+    printf("Inserisci la tua velocità di picco (in km/h): ");
+    scanf("%f", &vMax);
+    vMax = voto2V1(vMax);
+    printf("Inserisci la tua velocità media in curva (in km/h): ");
+    scanf("%f", &vCorner);
+    vCorner = voto3V1(vCorner);
+>>>>>>> c13d8a5 (Try)
+}
+
+
+
+
+
+
+<<<<<<< HEAD
+mediaponderata = ((calcoloDevS * pesoD) + (CVmax * pesoV) + (CVcorner * pesoC));
+=======
+mediaponderata = ((calcoloDevS * pesoD) + (vMax * pesoV) + (vCorner * pesoC));
+>>>>>>> c13d8a5 (Try)
+
+
+
+printf("La tua velocità media in curva è (in km/h): %g\n", vCorner);
+printf("La tua velocità di picco è (in km/h): %g\n", vMax);
+printf("%g\n", calcoloDevS);
+printf("Il tuo voto è: %g\n", mediaponderata);
+
+
+
+
+
+
+
+
+return 0;
+
+
+}
