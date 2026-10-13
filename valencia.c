@@ -1,10 +1,6 @@
 #include "valencia.h"
 
-<<<<<<< HEAD
-float votoDevSValencia(float devStandard)
-=======
 float voto1V1(float devStandard)
->>>>>>> c13d8a5 (Try)
 {
     if (devStandard >= 0.08 && devStandard <= 0.15) {
     return 10;
@@ -39,11 +35,7 @@ return 0;
 
 
 
-<<<<<<< HEAD
-float votoVMaxValencia(float vMax)
-=======
 float voto2V1(float vMax)
->>>>>>> c13d8a5 (Try)
 {
 
 
@@ -78,11 +70,7 @@ return 0;
 
 
 
-<<<<<<< HEAD
-float votoVCornerValencia(float vCorner)
-=======
 float voto3V1(float vCorner)
->>>>>>> c13d8a5 (Try)
 {
 
 
