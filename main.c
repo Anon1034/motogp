@@ -14,14 +14,7 @@ float somma = 0.0;
 float media = 0.0;
 float sommaScarti = 0.0;
 float deviazioneStandard = 0.0;
-<<<<<<< HEAD
-float voto;
 float vMax, vCorner;
-float CVcorner, CVmax;
-float deviazione;
-=======
-float vMax, vCorner;
->>>>>>> c13d8a5 (Try)
 float calcoloDevS;
 float pesoD = 0.30;
 float pesoV = 0.20;
@@ -29,10 +22,7 @@ float pesoC = 0.50;
 float mediaponderata;
 char wet;
 int laps;
-<<<<<<< HEAD
-=======
 float devStandard;
->>>>>>> c13d8a5 (Try)
 
 
 
@@ -40,17 +30,6 @@ printf("Enter the circuit: ");
 scanf("%19s", circuit);
 
 
-<<<<<<< HEAD
-
-if (strcasecmp(circuit, "valencia") == 0)
-    laps = 27;
-
-
-
-    float tempi[laps];
-
-
-=======
 /*Valencia Circuit*/
 if (strcasecmp(circuit, "valencia") == 0)
 {
@@ -58,7 +37,6 @@ if (strcasecmp(circuit, "valencia") == 0)
 
     float tempi[laps];
 
->>>>>>> c13d8a5 (Try)
     for (int i = 0; i < laps; i++)
     {
         printf("inserisci il tempo al giro (in secondi)%d: ", i + 1);
@@ -78,20 +56,6 @@ if (strcasecmp(circuit, "valencia") == 0)
     printf("%g secondi\n", deviazioneStandard);
 
 
-<<<<<<< HEAD
-
-
-    
-if (strcasecmp(circuit, "valencia") == 0)
-{
-    calcoloDevS = votoDevSValencia(deviazioneStandard);
-    printf("Inserisci la tua velocità di picco (in km/h): ");
-    scanf("%f", &vMax);
-    CVmax = votoVMaxValencia(vMax);
-    printf("Inserisci la tua velocità media in curva (in km/h): ");
-    scanf("%f", &vCorner);
-    CVcorner = votoVCornerValencia(vCorner);
-=======
     calcoloDevS = voto1V1(devStandard);
     printf("Inserisci la tua velocità di picco (in km/h): ");
     scanf("%f", &vMax);
@@ -99,7 +63,6 @@ if (strcasecmp(circuit, "valencia") == 0)
     printf("Inserisci la tua velocità media in curva (in km/h): ");
     scanf("%f", &vCorner);
     vCorner = voto3V1(vCorner);
->>>>>>> c13d8a5 (Try)
 }
 
 
@@ -107,11 +70,7 @@ if (strcasecmp(circuit, "valencia") == 0)
 
 
 
-<<<<<<< HEAD
-mediaponderata = ((calcoloDevS * pesoD) + (CVmax * pesoV) + (CVcorner * pesoC));
-=======
 mediaponderata = ((calcoloDevS * pesoD) + (vMax * pesoV) + (vCorner * pesoC));
->>>>>>> c13d8a5 (Try)
 
 
 
