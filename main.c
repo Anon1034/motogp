@@ -2,7 +2,6 @@
 #include <string.h>
 #include <strings.h>
 #include <math.h>
-
 #include "valencia.h"
 
 
@@ -16,7 +15,8 @@ float sommaScarti = 0.0;
 float deviazioneStandard = 0.0;
 float vMax, vCorner, vAvg;
 float calcoloDevS;
-float pesoD = 0.30;
+float pesoD = 0.20;
+float pesoVA = 0.10;
 float pesoV = 0.20;
 float pesoC = 0.50;
 float mediaponderata;
@@ -76,7 +76,7 @@ if (strcasecmp(circuit, "valencia") == 0)
 
 
 
-mediaponderata = ((calcoloDevS * pesoD) + (vMax * pesoV) + (vCorner * pesoC));
+mediaponderata = ((calcoloDevS * pesoD) + (vMax * pesoV) + (vCorner * pesoC) + (vAvg * pesoVA));
 
 
 
