@@ -14,7 +14,7 @@ float somma = 0.0;
 float media = 0.0;
 float sommaScarti = 0.0;
 float deviazioneStandard = 0.0;
-float vMax, vCorner;
+float vMax, vCorner, vAvg;
 float calcoloDevS;
 float pesoD = 0.30;
 float pesoV = 0.20;
@@ -63,6 +63,12 @@ if (strcasecmp(circuit, "valencia") == 0)
     printf("Inserisci la tua velocità media in curva (in km/h): ");
     scanf("%f", &vCorner);
     vCorner = voto3V1(vCorner);
+    printf("Inserisci la tua velocità media: ");
+    scanf("%f", &vAvg);
+    vAvg = voto4V1(vAvg);
+
+
+
 }
 
 
@@ -77,6 +83,7 @@ mediaponderata = ((calcoloDevS * pesoD) + (vMax * pesoV) + (vCorner * pesoC));
 printf("La tua velocità media in curva è (in km/h): %g\n", vCorner);
 printf("La tua velocità di picco è (in km/h): %g\n", vMax);
 printf("%g\n", calcoloDevS);
+printf("La tua velocità media è (in km/h): %g\n", vAvg);
 printf("Il tuo voto è: %g\n", mediaponderata);
 
 

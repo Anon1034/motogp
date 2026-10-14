@@ -111,5 +111,33 @@ else if (vCorner < 65)
     return 2;
 }
 
+
+
+float voto4V1(float vAvg);
+
+{
+    if (vAvg <= 162.3 && vAvg > 161.5)
+    {
+        return 11;
+    }
+    else if (vAvg <= 161.5 && vAvg > 159.0)
+    {
+        return 10;
+    }
+    else if (vAvg <= 159.0 && vAvg > 157.5)
+    {
+        return 7.5;
+    }
+    else if (vAvg <= 157.5 && vAvg > 155.5)
+    {
+        return 6;
+    }
+    else if (vAvg <= 155.0)
+    {
+        return 3;
+    }
+
+}
+
 return 0;
 }
